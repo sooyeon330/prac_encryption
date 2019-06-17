@@ -38,6 +38,7 @@
             this.btn_de = new System.Windows.Forms.Button();
             this.lb_destr = new System.Windows.Forms.Label();
             this.label_de = new System.Windows.Forms.Label();
+            this.lb_table = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lb_key
@@ -85,6 +86,7 @@
             this.btn_en.TabIndex = 2;
             this.btn_en.Text = "암호화";
             this.btn_en.UseVisualStyleBackColor = true;
+            this.btn_en.Click += new System.EventHandler(this.Btn_en_Click);
             // 
             // label_en
             // 
@@ -115,6 +117,7 @@
             this.btn_de.TabIndex = 2;
             this.btn_de.Text = "복호화";
             this.btn_de.UseVisualStyleBackColor = true;
+            this.btn_de.Click += new System.EventHandler(this.Btn_de_Click);
             // 
             // lb_destr
             // 
@@ -137,12 +140,22 @@
             this.label_de.TabIndex = 3;
             this.label_de.Text = "《복호문》";
             // 
+            // lb_table
+            // 
+            this.lb_table.AutoSize = true;
+            this.lb_table.Font = new System.Drawing.Font("나눔고딕", 12F);
+            this.lb_table.Location = new System.Drawing.Point(39, 157);
+            this.lb_table.Name = "lb_table";
+            this.lb_table.Size = new System.Drawing.Size(0, 23);
+            this.lb_table.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(675, 515);
             this.Controls.Add(this.label_de);
+            this.Controls.Add(this.lb_table);
             this.Controls.Add(this.label_en);
             this.Controls.Add(this.btn_de);
             this.Controls.Add(this.btn_en);
@@ -156,6 +169,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "암호화/복호화 쌍자치환";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,6 +187,7 @@
         private System.Windows.Forms.Button btn_de;
         private System.Windows.Forms.Label lb_destr;
         private System.Windows.Forms.Label label_de;
+        private System.Windows.Forms.Label lb_table;
     }
 }
 
